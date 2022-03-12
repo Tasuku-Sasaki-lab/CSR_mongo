@@ -1,4 +1,4 @@
-# CSR-_challenge-password_pymongo
+# CSR_mongo
 # Features
 This process gets a PEM file from stdin and a challenge password from command-line arguments.
 If the password is the same as what has been registered in a database, the program will exit with 0. 
@@ -9,9 +9,9 @@ The mongod server must be started in addition. Check with mongo.py.
 
 
 # Installation
-Install CSR-_challenge-password_pymongo with pip command.
+Install CSR_mongo with pip command.
 ```bash
-pip install CSR-_challenge-password_pymongo
+pip install CSR_mongo
 ```
 
 
