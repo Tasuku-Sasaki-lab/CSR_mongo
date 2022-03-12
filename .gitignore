@@ -1,0 +1,10 @@
+lib/.env
+lib/__pycache__
+tests/__pycache__
+SCEP
+.htaccess
+memo.py
+SCEP
+/.vscode
+__pycache__
+
