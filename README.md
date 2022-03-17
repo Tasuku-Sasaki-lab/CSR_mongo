@@ -15,7 +15,7 @@ pip install CSR_mongo
 ```
 
 
-# Usage
+# EAMPLE SETUP
 Before testing,<br>
 1.start mongod<br>
 2, create a user<br>
@@ -27,7 +27,9 @@ $sudo service mongod start
 ```
 
 <br>
-2, create a test user<br>
+2, create a test user
+<br>
+
 ```bash
 $mongo
 >use admin
@@ -44,14 +46,14 @@ $mongo
     user: "testuser",
     pwd:"password",
     roles:[
-       {role:"readWrite",  db:"{Data Base Name}"},
-       {role:"readWrite",  db:"{Data Base Name}"},
+       {role:"readWrite",  db:"verify"},
+       {role:"readWrite",  db:"verify"},
     ]
   }
 )
+>quit()
 ```
 
-This is a example.
 <br>
 ```bash
 $python3 -m CSR_mongo.lib.example_setup

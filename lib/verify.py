@@ -24,6 +24,11 @@ def setMongo():
  Are you sure this is a CSR?
 """
 
+"""
+Look at this page(https://cryptography.io/en/latest/x509/reference/) 
+to understand the difference between x509.load_pem_x509_csr(pem_file) and load_der_x509_csr(pem_file).
+"""
+
 
 def getCSR():
     pem_file = None
@@ -34,6 +39,19 @@ def getCSR():
 
     try:
         return x509.load_pem_x509_csr(pem_file)
+    except Exception as e:
+        exit(str(e))
+
+
+def getCSR_DER():
+    pem_file = None
+    try:
+        pem_file = sys.stdin.buffer.read()
+    except Exception as e:
+        exit(str(e))
+
+    try:
+        return x509.load_der_x509_csr(pem_file)
     except Exception as e:
         exit(str(e))
 
