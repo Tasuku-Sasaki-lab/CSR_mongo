@@ -108,7 +108,8 @@ $ python3 -m unittest CSR_mongo.tests.test_mongo
 <br>
 (This will take about 30s)
 <br>
-```
+
+```bash
 $ python3 -m unittest CSR_mongo.tests.test_verify
 ```
 
