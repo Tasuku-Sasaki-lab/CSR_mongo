@@ -27,7 +27,8 @@ $sudo service mongod start
 ```
 
 <br>
-2, create a test user<br>
+2, create a test user
+<br>
 ```bash
 $mongo
 >use admin
