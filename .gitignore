@@ -1,4 +1,3 @@
-lib/.env
 lib/__pycache__
 tests/__pycache__
 SCEP
@@ -7,4 +6,5 @@ memo.py
 SCEP
 /.vscode
 __pycache__
+
 

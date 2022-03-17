@@ -1,9 +1,6 @@
 from datetime import datetime
-from dateutil import relativedelta
-from bson.objectid import ObjectId  # ObjectId(oid)
 import sys
 from cryptography import x509
-from cryptography.hazmat.primitives import hashes
 
 from CSR_mongo.lib import mongo
 from CSR_mongo.lib import db
@@ -15,10 +12,6 @@ def setMongo():
     collection_name = db.DCL
     user_name = db.USN
     passwd = db.PWD
-
-    """
-        DBNAMEと　コレクションネーム　を考えるなら　ここやな
-    """
 
     return mongo.Mongo(user_name, passwd, url, db_name, collection_name)
 
@@ -69,7 +62,7 @@ def getDeviceID(csr):
         exit(str(e))
 
 
-def certificateCSR(device, passwd): 
+def certificateCSR(device, passwd):
     if device is None:
         exit("The device_id (RFC4514 Distinguished Name string) is not mathched")
 
@@ -104,16 +97,6 @@ The mongod server must be started in addition. Check with mongo.py.
 """
 
 
-def setUp():
-    now = datetime.now()
-    td = relativedelta.relativedelta(years=1)
-    post = {"csrID": 1, "csrGroup": 1, "CN": "CN=TEST1,OU=MDM,O=scep-client,C=US",
-            "secret": "pass", "expiration_date": now + td}
-    setMongo().deleteMany({"CN": "CN=TEST1,OU=MDM,O=scep-client,C=US"})
-    setMongo().addOne(post)
-
-
-
 def main():
     csr = getCSR()
 
@@ -125,5 +108,4 @@ def main():
 
 
 if __name__ == '__main__':
-    #setUp()
     main()

@@ -20,7 +20,8 @@ Before testing,<br>
 1.start mongod<br>
 2, create a user<br>
 
-1, start mongod<br>
+1, start mongod
+<br>
 ```bash
 $sudo service mongod start
 ```
@@ -50,9 +51,11 @@ $mongo
 )
 ```
 
-This is a example.<br>
+This is a example.
+<br>
 ```bash
-$ cat CSR_mongo/csr.pem | python3 -m CSR_mongo.lib.verify pass 
+$python3 -m CSR_mongo.lib.example_setup
+$cat CSR_mongo/csr.pem | python3 -m CSR_mongo.lib.verify pass 
 ```
 
 # Data Example
